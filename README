@@ -20,7 +20,12 @@ is not required.
 
 D.  Add an “About” page to the application to describe your chosen customer’s company
 to web viewers and include navigation to and from the “About” page and the main screen.
-
+    * Created an "aboutus.html" page in the templates folder that contain some information about the Rego Coffee Shop.
+    * Added a title tot he "aboutus.html" file, line 5.
+    * Added a paragraph to the "aboutus.html" file on line 10.
+    * Added a controller class for the about us page in the controllers folder.
+    * Added a link for the "About Us" page insdide the mainscreen.html file, line 89, that will map to the About us page.
+    * Added a link to the aboutus.html on line 13 that will map to the "mainscreen.html".
 
 E.  Add a sample inventory appropriate for your chosen store to the application.
 You should have five parts and five products in your sample inventory and should not
