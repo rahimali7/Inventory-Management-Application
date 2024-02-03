@@ -39,14 +39,16 @@ F.  Add a “Buy Now” button to your product list.
       didn't buy the product if the inventory is 0.
 
 
-G.  Modify the parts to track maximum and minimum inventory by doing the following:
-•  Add additional fields to the part entity for maximum and minimum inventory.
-•  Modify the sample inventory to include the maximum and minimum fields.
-•  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs
-    for the inventory so the user can set the maximum and minimum values.
-•  Rename the file the persistent storage is saved to.
-•  Modify the code to enforce that the inventory is between or at the minimum and maximum
-    value.
+G.  Modify the parts to track maximum and minimum inventory
+    * Part.java: lines 46 to 61, 97 to 109, I added maxInv and minInv fields and I added a constructor that contain the new fields.
+    * mainscreen.html: lines 38 - 39, 48 - 49, Modified the sample parts inventory to include a min inventory and max inventory fields.
+    * InhousePartForm.html: lines 24 - 28, I added additional inputs for minInv and maxInv and text for the inhouse part form
+    * OutsourcedPartForm.html: lines 25 - 29, I added additional inputs for minInv and maxInv and text for the inhouse part form
+    * I renamed the file the persistent storage is saved to.
+    * Part.java: lines 139 - 146, I added a method that will check if the inventory is between min inventory and max inventory
+    * AddInhousePartController.java: lines 44 - 55, I added a code to enforce the inventory is between the minimum and maximum inventory
+    * AddOutsourcedPartController.java: lines 44 - 55, I added a code to enforce the inventory is between the minimum and maximum inventory
+
 
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must

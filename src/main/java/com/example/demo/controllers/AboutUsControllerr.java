@@ -21,7 +21,7 @@ public class AboutUsControllerr {
     public AboutUsControllerr(){
     }
     @GetMapping("/aboutus")
-    public String listPartsandProducts(Model theModel){
+    public String getAboutUs(Model theModel){
         return "aboutus";
     }
 }

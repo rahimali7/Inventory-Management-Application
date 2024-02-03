@@ -29,6 +29,7 @@ import javax.validation.Valid;
 public class AddOutsourcedPartController {
     @Autowired
     private ApplicationContext context;
+    Part part;
 
     @GetMapping("/showFormAddOutPart")
     public String showFormAddOutsourcedPart(Model theModel){
@@ -40,7 +41,16 @@ public class AddOutsourcedPartController {
     @PostMapping("/showFormAddOutPart")
     public String submitForm(@Valid @ModelAttribute("outsourcedpart") OutsourcedPart part, BindingResult bindingResult, Model theModel){
         theModel.addAttribute("outsourcedpart",part);
-        if(bindingResult.hasErrors()){
+        if (part.getInv() < part.getMinInv()) {
+            bindingResult.rejectValue("inv", "error.inv", "Inventory is less than the min inventory");
+            return "InhousePartForm";
+        }
+        else if (part.getInv() > part.getMaxInv()){
+            bindingResult.rejectValue("inv", "error.inv", "Inventory is greater than the max inventory");
+            return "InhousePartForm";
+        }
+        if((bindingResult.hasErrors() || (!part.correctInventory()))) {
+            bindingResult.rejectValue("inv", "error.inv","Inventory must between min Inventory and max inventory!");
             return "OutsourcedPartForm";
         }
         else{
