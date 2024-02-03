@@ -27,18 +27,16 @@ You should have five parts and five products in your sample inventory and should
 overwrite existing data in the database.
 
 
-Note: Make sure the sample inventory is added only when both the part and product lists
-are empty. When adding the sample inventory appropriate for the store, the inventory
-is stored in a set so duplicate items cannot be added to your products. When duplicate
-items are added, make a “multi-pack” part.
 
-
-F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of
- the following parameters:
-•  The “Buy Now” button must be next to the buttons that update and delete products.
-•  The button should decrement the inventory of that product by one. It should not
-affect the inventory of any of the associated parts.
-•  Display a message that indicates the success or failure of a purchase.
+F.  Add a “Buy Now” button to your product list.
+    * mainscreen.html: line 87, I added a buy now button.
+    * Controllers directory: I added a BuyProductController for the Buy Now button on the mainscreen.
+        * The buy now button decrements product inventory by 1.
+        * There is a message that will be displayed to the user if the user tries to buy a product that have 0 inventory.
+    * templates directory: I created a confirmationbuyproduct.html file that will display a
+      a message when a product is purchased.
+    * templates directory: I created a producterrornavigator.html that will display a message informing the user they
+      didn't buy the product if the inventory is 0.
 
 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
