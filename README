@@ -9,20 +9,15 @@ C.  Customize the HTML user interface for your customer’s application.
 The user interface should include the shop name,
 the product names, and the names of the parts.
 
-    * Changed the title name of the mainscreen.html file on line 14 to "My Coffee Table Shop".
-    * Changed the header name on line 19 of the mainscreen.html file to "Coffee Table Shop".
-
-
-Note: Do not remove any elements that were included in the screen. You may add any
-additional elements you would like or any images, colors, and styles, although it
-is not required.
+    * Changed the title name of the mainscreen.html file on line 14 to "Rego Coffee Tables Shop".
+    * Changed the header name on line 19 of the mainscreen.html file to "Rego Coffee Tables Shop".
 
 
 D.  Add an “About” page to the application to describe your chosen customer’s company
 to web viewers and include navigation to and from the “About” page and the main screen.
     * Created an "aboutus.html" page in the templates folder that contain some information about the Rego Coffee Shop.
     * Added a title tot he "aboutus.html" file, line 5.
-    * Added a paragraph to the "aboutus.html" file on line 10.
+    * Added a header to the "aboutus.html" file on line 10.
     * Added a controller class for the about us page in the controllers folder.
     * Added a link for the "About Us" page insdide the mainscreen.html file, line 89, that will map to the About us page.
     * Added a link to the aboutus.html on line 13 that will map to the "mainscreen.html".
