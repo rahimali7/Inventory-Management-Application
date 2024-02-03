@@ -25,6 +25,7 @@ import java.util.List;
 public class AddPartController {
     @Autowired
     private ApplicationContext context;
+    Part part;
 
     @GetMapping("/showPartFormForUpdate")
     public String showPartFormForUpdate(@RequestParam("partID") int theId,Model theModel){
@@ -39,6 +40,7 @@ public class AddPartController {
             if(outsourcedPart.getId()==theId)inhouse=false;
         }
         String formtype;
+
         if(inhouse){
             InhousePart inhousePart=inhouserepo.findById(theId);
             theModel.addAttribute("inhousepart",inhousePart);
