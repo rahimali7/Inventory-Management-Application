@@ -20,7 +20,7 @@ public class BuyProductController {
     @Autowired
     private ProductRepository productRepository;
 
-    @PostMapping("/buyProduct")
+    @GetMapping("/buyProduct")
     public String buyProduct(@RequestParam("productID") int theId, Model model) {
         Long theidl = (long) theId;
 
