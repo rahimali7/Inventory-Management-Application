@@ -9,22 +9,21 @@ C.  Customize the HTML user interface for your customer’s application.
 The user interface should include the shop name,
 the product names, and the names of the parts.
 
-    * Changed the title name of the mainscreen.html file on line 14 to "Rego Coffee Tables Shop".
-    * Changed the header name on line 19 of the mainscreen.html file to "Rego Coffee Tables Shop".
+    * mainscreen.html file on line 14, I changed the title to "Rego Coffee Tables Shop".
+    * mainscreen.html, line 19, I changed the header to "Rego Coffee Tables Shop".
 
 
 D.  Add an “About” page to the application to describe your chosen customer’s company
 to web viewers and include navigation to and from the “About” page and the main screen.
     * Created an "aboutus.html" page in the templates folder that contain some information about the Rego Coffee Shop.
-    * Added a title tot he "aboutus.html" file, line 5
-    * Added a header to the "aboutus.html" file on line 10
-    * Added a controller class for the about us page in the controllers folder
-    * Added a link for the "About Us" page insdide the mainscreen.html file, line 89, that will map to the About us page
-    * Added a link to the aboutus.html on line 13 that will map to the "mainscreen.html"
+    * aboutus.html: line 5, I added a title to the page
+    * aboutus.html file on line 10, I added a header to the page
+    * controllers directory: I added a controller class for the about us page in the controllers directory
+    * mainscreen.html file, line 89, I added a link for the "About Us" page insdide the main page that will map to the About us page
+    * aboutus.html on line 13, I added a link to about us page the that will map to the "mainscreen.html"
 
-E.  Add a sample inventory appropriate for your chosen store to the application.
-You should have five parts and five products in your sample inventory and should not
-overwrite existing data in the database.
+E.  Add a sample inventory appropriate for your chosen store to the application. Five parts and five products.
+    * BootStrapData.java: lines 60 - 101, 118 - 130, I added five sample parts and five sample products in my sample inventory.
 
 
 
@@ -67,7 +66,7 @@ I.  Add at least two unit tests for the maximum and minimum fields to the PartTe
 
 
 J.  Remove the class files for any unused validators in order to clean your code.
-
+    * validators directory, file DeletePartValidator.java is removed for not being used.
 
 K.  Demonstrate professional communication in the content and presentation of your
     submission.
